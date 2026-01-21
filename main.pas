@@ -1,7 +1,12 @@
-program main;
+program Main;
 
-uses app;
+uses
+  App, BankReducer;
 
 begin
-    Writeln(app());
+  Randomize;   
+  InitApp;
+  RunApp;
+
+  ReadLn;
 end.
