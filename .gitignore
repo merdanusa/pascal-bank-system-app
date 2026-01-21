@@ -8,6 +8,7 @@
 *.tds
 *.bak
 *.tmp
+*.pcu
 
 # IDE or editor files
 *.~*          # temporary files from editors
