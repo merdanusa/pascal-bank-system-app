@@ -34,8 +34,24 @@ begin
   
   ReadLn(choice);
   case choice of
-    1: State := reducer(State, deposit, 100);
-    2: State := reducer(State, withdraw, 50);
+    1: begin 
+        Writeln('How much would you like to deposit?');
+        var amount: Real;
+        ReadLn(amount);
+        if amount > State.CashMoney then
+          Writeln('Insufficient cash to deposit that amount.')
+        else
+        State := reducer(State, deposit, amount);
+    end;
+    2: begin
+        Writeln('How much would you like to withdraw?');
+        var amount: Real;
+        ReadLn(amount);
+        if amount > State.Balance then
+          Writeln('Insufficient balance to withdraw that amount.')
+        else
+        State := reducer(State, withdraw, 50);
+    end;
     3: Writeln('Your balance is: $', State.Balance:0:2);
     4: Writeln('Thank you for using the Pascal Bank System App!');
   else
