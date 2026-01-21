@@ -35,5 +35,3 @@ Users can deposit and withdraw money, check balances, and the app safely handles
 6. Press **4** to exit the application.
 
 ---
-
-## Example Usage
