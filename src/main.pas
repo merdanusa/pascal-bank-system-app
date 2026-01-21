@@ -8,5 +8,6 @@ begin
   InitApp;
   RunApp;
 
+  Writeln('Press Enter to exit...');
   ReadLn;
 end.
